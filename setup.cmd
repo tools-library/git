@@ -8,7 +8,7 @@ SETLOCAL ENABLEDELAYEDEXPANSION
     SET "utility_software_folder=%utility_folder%software"
     SET "utility_sfx=%utility_folder%software.exe"
 
-    CALL "%utility_folder%..\utils\setup.cmd" cecho 7zip
+    CALL "%utility_folder%..\win-utils\setup.cmd" cecho 7zip
 
     SET help_arg=false
     SET pack_arg=false
