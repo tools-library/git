@@ -1,2 +1,2 @@
-Website    : https://gitforwindows.org
-Repository : https://github.com/git-for-windows/git
+Website    : https://gitforwindows.org<br>
+Repository : https://github.com/git-for-windows/git<br>
