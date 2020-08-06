@@ -154,23 +154,25 @@ EXIT /B 0
     cecho {olive}[TOOLSET - UTILS - GIT]{red} ERROR: %~1 {default} {\n}
 EXIT /B 0
 
+
+
 :SHOW_HELP
     SET "script_name=%~n0%~x0"
     ECHO #######################################################################
     ECHO #                                                                     #
     ECHO #                      T O O L   S E T U P                            #
     ECHO #                                                                     #
-    ECHO #         'Git' is a distributed version-control system for           #
-    ECHO #         tracking changes in source code during software             #
-    ECHO #         development at high compression ratio.                      #
+    ECHO #         'GIT' is a distributed version-control system for           #
+    ECHO #          tracking changes in source code during software            #
+    ECHO #          development at high compression ratio.                     #
     ECHO #                                                                     #
-    ECHO # TOOL   : Git                                                        #
+    ECHO # TOOL   : GIT                                                        #
     ECHO # VERSION: 2.27.0.windows.1                                           #
     ECHO # ARCH   : x64                                                        #
     ECHO #                                                                     #
     ECHO # USAGE:                                                              #
-    ECHO #   %SCRIPT_NAME% {[-h^|--help^|--pack^|--unpack] ^| [--mode (1^|2^|3^|4)]       #
-    ECHO #       [--home-path path/to/home]}                                   #
+    ECHO #     %SCRIPT_NAME% {[-h^|--help^|--pack^|--unpack] ^| [--mode 1^|2^|3^|4]       #
+    ECHO #         [--home-path path/to/home]}                                 #
     ECHO #                                                                     #
     ECHO # EXAMPLES:                                                           #
     ECHO #     %script_name%                                                       #
@@ -199,7 +201,7 @@ EXIT /B 0
     ECHO #         plus the following commands - 'bash', 'git' and 'sh'.       #
     ECHO #                                                                     #
     ECHO #         When 4, we will have access to all commands of the 'mode 1' #
-    ECHO #         and the following paths of 'msysgit' will be added to the  #
+    ECHO #         and the following paths of 'msysgit' will be added to the   #
     ECHO #         system path - '/mingw64/bin', '/usr/local/bin', '/usr/bin', #
     ECHO #         '/usr/bin/vendor_perl' and '/usr/bin/core_perl'. With this  #
     ECHO #         we will have access to a lot of unix tools right in the     #
@@ -220,7 +222,7 @@ EXIT /B 0
     ECHO #     PATH    This tool will export all local changes that it made to #
     ECHO #         the path's environment variable.                            #
     ECHO #                                                                     #
-    ECHO #     The environment variables will be exported only if this script  #
+    ECHO #     The environment variables will be exported only if this tool    #
     ECHO #     executes without any error.                                     #
     ECHO #                                                                     #
     ECHO #######################################################################
