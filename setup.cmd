@@ -171,7 +171,7 @@ EXIT /B 0
     ECHO # ARCH   : x64                                                        #
     ECHO #                                                                     #
     ECHO # USAGE:                                                              #
-    ECHO #     %SCRIPT_NAME% {[-h^|--help^|--pack^|--unpack] ^| [--mode 1^|2^|3^|4]       #
+    ECHO #     %SCRIPT_NAME% {-h^|--help^|--pack^|--unpack ^| [--mode 1^|2^|3^|4]         #
     ECHO #         [--home-path path/to/home]}                                 #
     ECHO #                                                                     #
     ECHO # EXAMPLES:                                                           #
