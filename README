@@ -1,2 +1,72 @@
-Website    : https://gitforwindows.org
-Repository : https://github.com/git-for-windows/git
+
+                            G I T
+
+        'GIT' is a distributed version-control system for
+        tracking changes in source code during software
+        development at high compression ratio.
+
+        Website https://gitforwindows.org
+        Repository https://github.com/git-for-windows/git
+
+        After running the setup.cmd, with the appropriate
+        arguments, the tool will be available in the system
+        path.
+
+TOOL   : GIT
+VERSION: 2.27.0.windows.1
+ARCH   : x64
+
+USAGE:
+    setup.cmd {-h|--help|--pack|--unpack | [--mode 1|2|3|4]
+        [--home-path path/to/home]}
+
+EXAMPLES:
+    setup.cmd
+    setup.cmd -h
+    setup.cmd --pack
+    setup.cmd --mode 3
+    setup.cmd --mode 2 --home-path "/home/user"
+    setup.cmd --mode 4 --home-path "c:/my/home/user"
+
+ARGUMENTS:
+    -h|--help    Print this help and exit.
+
+    --pack    Pack the content of the software folder in one
+        self-extract executable called 'software.exe'.
+
+    --unpack    Unpack the self-extract executable 'software.exe'
+        to the software folder.
+
+    --mode    When 1, we will have access to the following commands
+        in our windows cmd prompt - 'git-bash' and 'git-cmd'.
+
+        When 2, we will have access to all commands of the 'mode 1'
+        plus the following commands - 'git', 'git-gui' and 'gitk'.
+
+        When 3, we will have access to all commands of the 'mode 1'
+        plus the following commands - 'bash', 'git' and 'sh'.
+
+        When 4, we will have access to all commands of the 'mode 1'
+        and the following paths of 'msysgit' will be added to the
+        system path - '/mingw64/bin', '/usr/local/bin', '/usr/bin',
+        '/usr/bin/vendor_perl' and '/usr/bin/core_perl'. With this
+        we will have access to a lot of unix tools right in the
+        windows cmd prompt. OBS: Use this with care!
+
+    --home-path    Path where the 'home' folder, for the git config
+        files, will be located. If not specified, the 'home' folder
+        will be defaulted to the following location
+        '[drive]:/Users/[user]/'. Example: 'C:/Users/BillGates/'.
+        This argument must be a valid path to a folder in windows
+        or 'msysgit' and must have no spaces in it. If the path
+        does not exist, it will be created.
+
+EXPORTED ENVIRONMENT VARIABLES:
+    TOOLSET_GIT_PATH    Absolute path where this tool is
+        located.
+
+    PATH    This tool will export all local changes that it made to
+        the path's environment variable.
+
+    The environment variables will be exported only if this tool
+    executes without any error.

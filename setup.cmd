@@ -8,6 +8,7 @@ SETLOCAL ENABLEDELAYEDEXPANSION
     SET "utility_software_folder=%utility_folder%software"
     SET "utility_sfx=%utility_folder%software.exe"
 
+    REM Load dependent tools...
     CALL "%utility_folder%..\win-utils\setup.cmd" cecho 7zip
 
     SET help_arg=false
@@ -55,7 +56,7 @@ EXIT /B 0
     SET "msys_cygpath_cmd=%utility_software_folder%\usr\bin\cygpath.exe"
 
     REM Mode 1.
-    REM     Always put the 'path_to_git_mode1' in the system path, if it is not 
+    REM     Always put the 'path_to_git_mode1' in the system path, if it is not
     REM     already present.
     SET "path_to_git_mode1=%utility_software_folder%"
     ECHO "!PATH!" | "%windows_find_cmd%" /I "%path_to_git_mode1%" >NUL && ( call  ) || (
@@ -143,15 +144,15 @@ EXIT /B 0
 
 
 :SHOW_INFO
-    cecho {olive}[TOOLSET - UTILS - GIT]{default} INFO: %~1{\n}
+    cecho {olive}[TOOLSET - GIT]{default} INFO: %~1{\n}
 EXIT /B 0
 
 :SHOW_DETAIL
-    cecho {white}[TOOLSET - UTILS - GIT]{default} DETAIL: %~1{\n}
+    cecho {white}[TOOLSET - GIT]{default} DETAIL: %~1{\n}
 EXIT /B 0
 
 :SHOW_ERROR
-    cecho {olive}[TOOLSET - UTILS - GIT]{red} ERROR: %~1 {default} {\n}
+    cecho {olive}[TOOLSET - GIT]{red} ERROR: %~1 {default} {\n}
 EXIT /B 0
 
 
@@ -165,6 +166,13 @@ EXIT /B 0
     ECHO #         'GIT' is a distributed version-control system for           #
     ECHO #          tracking changes in source code during software            #
     ECHO #          development at high compression ratio.                     #
+    ECHO #                                                                     #
+    ECHO #          Website https://gitforwindows.org                          #
+    ECHO #          Repository https://github.com/git-for-windows/git          #
+    ECHO #                                                                     #
+    ECHO #          After running the %SCRIPT_NAME%, with the appropriate          #
+    ECHO #          arguments, the tool will be available in the system        #
+    ECHO #          path.                                                      #
     ECHO #                                                                     #
     ECHO # TOOL   : GIT                                                        #
     ECHO # VERSION: 2.27.0.windows.1                                           #
@@ -197,7 +205,7 @@ EXIT /B 0
     ECHO #         When 2, we will have access to all commands of the 'mode 1' #
     ECHO #         plus the following commands - 'git', 'git-gui' and 'gitk'.  #
     ECHO #                                                                     #
-    ECHO #         When 3, we will have access to all commands of the 'mode 1' # 
+    ECHO #         When 3, we will have access to all commands of the 'mode 1' #
     ECHO #         plus the following commands - 'bash', 'git' and 'sh'.       #
     ECHO #                                                                     #
     ECHO #         When 4, we will have access to all commands of the 'mode 1' #
@@ -207,13 +215,13 @@ EXIT /B 0
     ECHO #         we will have access to a lot of unix tools right in the     #
     ECHO #         windows cmd prompt. OBS: Use this with care^^!                #
     ECHO #                                                                     #
-    ECHO #     --home-path    Path where the 'home' folder, for the git config # 
+    ECHO #     --home-path    Path where the 'home' folder, for the git config #
     ECHO #         files, will be located. If not specified, the 'home' folder #
     ECHO #         will be defaulted to the following location                 #
     ECHO #         '[drive]:/Users/[user]/'. Example: 'C:/Users/BillGates/'.   #
-    ECHO #         This argument must be a valid path to a folder in windows   # 
+    ECHO #         This argument must be a valid path to a folder in windows   #
     ECHO #         or 'msysgit' and must have no spaces in it. If the path     #
-    ECHO #         does not exist, it will be created.                         #    
+    ECHO #         does not exist, it will be created.                         #
     ECHO #                                                                     #
     ECHO # EXPORTED ENVIRONMENT VARIABLES:                                     #
     ECHO #     TOOLSET_GIT_PATH    Absolute path where this tool is            #

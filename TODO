@@ -1,0 +1,12 @@
+
+* Refactor the setup.cmd script. It is working very well, but
+it is based on an old structure and nomenclature. Use structure
+and nomenclature based on the win-msvc tool
+(https://github.com/tools-library/win-msvc).
+
+* Add an argument indicating that changes made to the 'PATH'
+environment variable should not be exported. The main reason
+for this is that we could use this tool with minimal impact
+on the system's environment variables. That way, when we are
+going to use this tool, we can find them based on the exported
+environment variable 'TOOLSET_GIT_PATH'.
